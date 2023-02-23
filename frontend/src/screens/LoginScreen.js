@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Form, Button, Col, Row } from 'react-bootstrap'
+import { Form, Button, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -23,7 +23,7 @@ const LoginScreen = () => {
     if (userInfo) {
       navigate(redirect)
     }
-  }, [userInfo, redirect])
+  }, [userInfo, redirect, navigate])
 
   const submitHandler = (e) => {
     e.preventDefault()

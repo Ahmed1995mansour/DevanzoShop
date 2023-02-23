@@ -7,7 +7,7 @@ import { userLogout } from '../actions/userActions'
 const Header = () => {
   const disptach = useDispatch()
   const userLogin = useSelector((state) => state.userLogin)
-  const { loading, error, userInfo } = userLogin
+  const { userInfo } = userLogin
 
   const logoutHandler = () => {
     disptach(userLogout())
