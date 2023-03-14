@@ -58,7 +58,13 @@ const App = () => {
               element={<ProfileScreen />}
             />
             <Route
+              exact
               path='/admin/productlist'
+              element={<ProductListScreen />}
+            />
+            <Route
+              exact
+              path='/admin/productlist/:pageNumber'
               element={<ProductListScreen />}
             />
             <Route
@@ -88,7 +94,16 @@ const App = () => {
               />
             </Route>
             <Route
+              exact
               path='/search/:keyword'
+              element={<HomeScreen />}
+            />
+            <Route
+              path='/page/:pageNumber'
+              element={<HomeScreen />}
+            />
+            <Route
+              path='/search/:keyword/page/:pageNumber'
               element={<HomeScreen />}
             />
             <Route
